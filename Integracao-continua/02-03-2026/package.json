@@ -1,0 +1,24 @@
+{
+  "name": "fatec-ci_cd_02-03-2026",
+  "version": "1.0.0",
+  "description": "add(a, b): Retorna a soma de a e b. subtract(a, b): Retorna a diferença entre a e b. multiply(a, b): Retorna o produto de a e b. divide(a, b): Retorna a divisão de a por b.",
+  "homepage": "https://github.com/duddy57/fatec-ci_cd_02-03-2026#readme",
+  "bugs": {
+    "url": "https://github.com/duddy57/fatec-ci_cd_02-03-2026/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/duddy57/fatec-ci_cd_02-03-2026.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "src/math.js",
+  "scripts": {
+    "dev": "node src/math.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "jest": "^29.0.0"
+  }
+}
