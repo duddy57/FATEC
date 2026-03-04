@@ -1,0 +1,57 @@
+:root {
+  --color-bg: #3d3a3a;
+  --color-surface-dark: #2a2727;
+  --color-surface-mid: rgba(20, 36, 36, 0.67);
+  --color-surface-alt: #424242;
+  --color-white: #ffffff;
+  --color-white-soft: #fefefe;
+  --color-black: #000000;
+
+  --navbar-bg: var(--color-white);
+  --navbar-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  --navbar-width: 555px;
+  --navbar-height: 74px;
+  --navbar-radius: 20px;
+  --navbar-padding: 16px 26px;
+  --navbar-gap: 55px;
+  --navbar-font: "Inter", sans-serif;
+  --navbar-font-weight: 600;
+  --navbar-font-size: 24px;
+
+  --font-section: "Abhaya Libre", serif;
+  --font-section-weight: 800;
+  --font-section-size: 64px;
+  --font-section-lh: 1.18;
+
+  --font-card: "Abhaya Libre", serif;
+  --font-card-weight: 800;
+  --font-card-size: 32px;
+  --font-card-lh: 1.18;
+
+  --font-featured: "Abhaya Libre", serif;
+  --font-featured-weight: 800;
+  --font-featured-size: 40px;
+  --font-featured-lh: 1.18;
+
+  --section-width: 1440px;
+
+  --card-height: 155px;
+  --card-thumb-width: 161px;
+  --card-thumb-radius: 20px;
+  --card-left-radius: 20px 0px 0px 20px;
+  --card-right-radius: 0px 20px 20px 0px;
+
+  --featured-card-radius-top: 20px 20px 0px 0px;
+  --featured-card-radius-bottom: 0px 0px 20px 20px;
+
+  --divider-color-white: #ffffff;
+  --divider-color-black: #000000;
+
+  --transition-base: 0.2s ease;
+
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 32px;
+  --spacing-xl: 64px;
+}

@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Receitas & Sabores</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@800&family=Inter:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/navbar.css" />
+    <link rel="stylesheet" href="css/home.css" />
+    <link rel="stylesheet" href="css/receitas.css" />
+    <link rel="stylesheet" href="css/diet.css" />
+  </head>
+  <body>
+    <nav class="navbar" id="navbar">
+      <div class="navbar__bg"></div>
+      <a href="#home" class="navbar__item" data-section="home">
+        <img
+          src="assets/icons/icon-house.svg"
+          alt="Ícone início"
+          class="navbar__icon"
+        />
+        <span class="navbar__label">Inicio</span>
+      </a>
+      <a href="#receitas" class="navbar__item" data-section="receitas">
+        <img
+          src="assets/icons/icon-book.svg"
+          alt="Ícone receitas"
+          class="navbar__icon"
+        />
+        <span class="navbar__label">Receitas</span>
+      </a>
+      <a href="#diet" class="navbar__item" data-section="diet">
+        <img
+          src="assets/icons/icon-carrot.svg"
+          alt="Ícone diet"
+          class="navbar__icon"
+        />
+        <span class="navbar__label">Diet</span>
+      </a>
+    </nav>
+
+    <main>
+      <section class="home" id="home">
+        <div class="home__inner">
+          <div class="home__featured">
+            <div class="home__featured-card">
+              <div class="home__featured-image-wrap">
+                <img
+                  src="assets/images/gelatina.png"
+                  alt="Gelatina colorida com creme de leite e manga"
+                  class="home__featured-image"
+                />
+              </div>
+              <div class="home__featured-info">
+                <p class="home__featured-text">
+                  Gelatina colorida com creme de leite e manga
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="home__right">
+            <div class="home__header">
+              <h2 class="home__title">Receitas do momento</h2>
+              <hr class="home__divider" />
+            </div>
+
+            <div class="home__recipes">
+              <article class="recipe-card" data-id="bolo-cenoura">
+                <div class="recipe-card__thumb">
+                  <img
+                    src="assets/images/bolo-cenoura.png"
+                    alt="Bolo de cenoura com calda de chocolate"
+                  />
+                </div>
+                <p class="recipe-card__title">
+                  Bolo de cenoura com calda de chocolate
+                </p>
+              </article>
+
+              <article class="recipe-card" data-id="pudim">
+                <div class="recipe-card__thumb">
+                  <img
+                    src="assets/images/pudim.png"
+                    alt="Pudim de leite condensado com calda de caramelo"
+                  />
+                </div>
+                <p class="recipe-card__title">
+                  Pudim de leite condensado com calda de caramelo
+                </p>
+              </article>
+
+              <article class="recipe-card" data-id="panqueca">
+                <div class="recipe-card__thumb">
+                  <img
+                    src="assets/images/panqueca.png"
+                    alt="Massa de panqueca"
+                  />
+                </div>
+                <p class="recipe-card__title">Massa de panqueca</p>
+              </article>
+            </div>
+          </div>
+        </div>
+
+        <hr class="section__divider" />
+      </section>
+
+      <section class="receitas" id="receitas">
+        <div class="receitas__header">
+          <h2 class="receitas__title">Receitas</h2>
+          <hr class="receitas__divider" />
+        </div>
+
+        <div class="receitas__grid">
+          <div class="receitas__col receitas__col--left">
+            <article class="recipe-row" data-id="fricasse">
+              <div class="recipe-row__thumb">
+                <img
+                  src="assets/images/fricasse.png"
+                  alt="Fricassê de frango com batata palha"
+                />
+              </div>
+              <p class="recipe-row__title">
+                Fricassê de frango com batata palha
+              </p>
+            </article>
+
+            <article class="recipe-row" data-id="bolo-chocolate">
+              <div class="recipe-row__thumb">
+                <img
+                  src="assets/images/bolo-chocolate.png"
+                  alt="Bolo de chocolate com calda"
+                />
+              </div>
+              <p class="recipe-row__title">Bolo de chocolate com calda</p>
+            </article>
+
+            <article class="recipe-row" data-id="strogonoff">
+              <div class="recipe-row__thumb">
+                <img
+                  src="assets/images/strogonoff.png"
+                  alt="Strogonoff de frango"
+                />
+              </div>
+              <p class="recipe-row__title">Strogonoff de frango</p>
+            </article>
+          </div>
+
+          <div class="receitas__col receitas__col--right">
+            <article class="recipe-row" data-id="bolinho">
+              <div class="recipe-row__thumb">
+                <img
+                  src="assets/images/bolinho.png"
+                  alt="Bolinho de chuva com farinha de rosca"
+                />
+              </div>
+              <p class="recipe-row__title">
+                Bolinho de chuva com farinha de rosca
+              </p>
+            </article>
+
+            <article class="recipe-row" data-id="batata-frita">
+              <div class="recipe-row__thumb">
+                <img
+                  src="assets/images/batata-frita.png"
+                  alt="Batata frita de Air Fryer"
+                />
+              </div>
+              <p class="recipe-row__title">Batata frita de Air Fryer</p>
+            </article>
+
+            <article class="recipe-row" data-id="salgadinho">
+              <div class="recipe-row__thumb">
+                <img
+                  src="assets/images/salgadinho.png"
+                  alt="Salgadinho de macarrão na airfryer"
+                />
+              </div>
+              <p class="recipe-row__title">
+                Salgadinho de macarrão na airfryer
+              </p>
+            </article>
+          </div>
+        </div>
+
+        <hr class="section__divider" />
+      </section>
+
+      <section class="diet" id="diet">
+        <div class="diet__header">
+          <h2 class="diet__title">Diet</h2>
+          <hr class="diet__divider" />
+        </div>
+
+        <div class="diet__grid">
+          <div class="diet__col diet__col--left">
+            <article class="recipe-row diet__card" data-id="salada-caesar">
+              <div class="recipe-row__thumb">
+                <img
+                  src="assets/images/fricasse.png"
+                  alt="Salada Caesar light"
+                />
+              </div>
+              <p class="recipe-row__title">Salada Caesar light</p>
+            </article>
+
+            <article class="recipe-row diet__card" data-id="smoothie-verde">
+              <div class="recipe-row__thumb">
+                <img
+                  src="assets/images/panqueca.png"
+                  alt="Smoothie verde detox"
+                />
+              </div>
+              <p class="recipe-row__title">Smoothie verde detox</p>
+            </article>
+
+            <article class="recipe-row diet__card" data-id="frango-grelhado">
+              <div class="recipe-row__thumb">
+                <img
+                  src="assets/images/strogonoff.png"
+                  alt="Frango grelhado com legumes"
+                />
+              </div>
+              <p class="recipe-row__title">Frango grelhado com legumes</p>
+            </article>
+          </div>
+
+          <div class="diet__col diet__col--right">
+            <article class="recipe-row diet__card" data-id="wrap-atum">
+              <div class="recipe-row__thumb">
+                <img
+                  src="assets/images/bolinho.png"
+                  alt="Wrap de atum com cenoura"
+                />
+              </div>
+              <p class="recipe-row__title">Wrap de atum com cenoura</p>
+            </article>
+
+            <article class="recipe-row diet__card" data-id="omelete-espinafre">
+              <div class="recipe-row__thumb">
+                <img
+                  src="assets/images/bolo-cenoura.png"
+                  alt="Omelete de espinafre"
+                />
+              </div>
+              <p class="recipe-row__title">Omelete de espinafre</p>
+            </article>
+
+            <article class="recipe-row diet__card" data-id="iogurte-frutas">
+              <div class="recipe-row__thumb">
+                <img
+                  src="assets/images/pudim.png"
+                  alt="Iogurte com frutas vermelhas"
+                />
+              </div>
+              <p class="recipe-row__title">Iogurte com frutas vermelhas</p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="js/navbar.js"></script>
+    <script src="js/home.js"></script>
+    <script src="js/receitas.js"></script>
+    <script src="js/diet.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

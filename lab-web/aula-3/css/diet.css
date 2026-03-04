@@ -1,0 +1,77 @@
+.diet {
+  position: relative;
+  width: 100%;
+  background-color: var(--color-bg);
+  padding: 100px var(--spacing-lg) var(--spacing-xl);
+}
+
+.diet__header {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+  margin: 0 auto var(--spacing-xl);
+  text-align: center;
+}
+
+.diet__title {
+  font-family: var(--font-section);
+  font-weight: var(--font-section-weight);
+  font-size: clamp(2rem, 5vw, var(--font-section-size));
+  line-height: var(--font-section-lh);
+  color: var(--color-white);
+}
+
+.diet__divider {
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: var(--divider-color-white);
+  margin-top: 8px;
+}
+
+.diet__grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-lg);
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.diet__col {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.diet__card .recipe-row__thumb::after {
+  content: "🥗";
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  font-size: 14px;
+  line-height: 1;
+  z-index: 2;
+}
+
+.diet__col .recipe-row {
+  margin-bottom: 0;
+  width: 100%;
+}
+
+@media (max-width: 900px) {
+  .diet__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .diet {
+    padding-top: 80px;
+  }
+
+  .diet__header {
+    margin-bottom: var(--spacing-lg);
+  }
+}
