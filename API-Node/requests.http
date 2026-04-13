@@ -1,0 +1,50 @@
+@baseUrl = http://localhost:3000
+@contatoId = COLE_O_ID_AQUI
+
+### Healthcheck da API
+GET {{baseUrl}}/
+Content-Type: application/json
+
+### Listar todos os contatos
+GET {{baseUrl}}/contatos
+Content-Type: application/json
+
+### Buscar contato por ID
+GET {{baseUrl}}/contatos/{{contatoId}}
+Content-Type: application/json
+
+### Criar novo contato
+# @name criarContato
+POST {{baseUrl}}/contatos
+Content-Type: application/json
+
+{
+	"nome": "Maria Silva",
+	"email": "maria.silva@email.com",
+	"telefone": "11 99999-9999",
+	"endereco": "Rua das Flores, 123",
+	"foto": "https://example.com/fotos/maria.jpg"
+}
+
+### Capturar ID do contato criado automaticamente
+@contatoId = {{criarContato.response.body.$._id}}
+
+### Atualizar contato por ID
+PUT {{baseUrl}}/contatos/{{contatoId}}
+Content-Type: application/json
+
+{
+	"nome": "Maria Silva Atualizada",
+	"email": "maria.atualizada@email.com",
+	"telefone": "11 98888-7777",
+	"endereco": "Avenida Brasil, 456",
+	"foto": "https://example.com/fotos/maria-atualizada.jpg"
+}
+
+### Excluir contato por ID
+DELETE {{baseUrl}}/contatos/{{contatoId}}
+Content-Type: application/json
+
+### Rota inexistente (teste de 404)
+GET {{baseUrl}}/rota-inexistente
+Content-Type: application/json
