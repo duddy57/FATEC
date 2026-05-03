@@ -1,0 +1,23 @@
+version: '3.9'
+services:
+  mongodb:
+    image: mongo:6
+    container_name: mysql_contatos_mongo
+    restart: unless-stopped
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+
+  api:
+    build: .
+    container_name: contatos_api
+    depends_on:
+      - mongodb
+    environment:
+      - MONGODB_URI=mongodb://mongodb:27017/contatos
+      - PORT=3000
+    ports:
+      - "3000:3000"
+volumes:
+  mongo_data:
