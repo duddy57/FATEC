@@ -1,7 +1,0 @@
-node_modules
-test
-dist
-coverage
-.env
-Dockerfile
-docker-compose.yml
