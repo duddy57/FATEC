@@ -1,9 +1,7 @@
-const express = require('express');
+const express = require("express");
 const router = express.Router();
-const Contato = require('../models/contato');
-
-// Rota para obter todos os contatos
-router.get('/', async (req, res) => {
+const Contato = require("../models/contato");
+router.get("/", async (req, res) => {
   try {
     const contatos = await Contato.find();
     res.json(contatos);
@@ -12,13 +10,11 @@ router.get('/', async (req, res) => {
   }
 });
 
-// Rota para obter um contato por ID
-router.get('/:id', getContato, (req, res) => {
+router.get("/:id", getContato, (req, res) => {
   res.json(res.contato);
 });
 
-// Rota para criar um novo contato
-router.post('/', async (req, res) => {
+router.post("/", async (req, res) => {
   const contato = new Contato({
     nome: req.body.nome,
     email: req.body.email,
@@ -36,7 +32,7 @@ router.post('/', async (req, res) => {
 });
 
 // Rota para atualizar um contato por ID
-router.put('/:id', getContato, async (req, res) => {
+router.put("/:id", getContato, async (req, res) => {
   if (req.body.nome != null) {
     res.contato.nome = req.body.nome;
   }
@@ -61,11 +57,10 @@ router.put('/:id', getContato, async (req, res) => {
   }
 });
 
-// Rota para excluir um contato por ID
-router.delete('/:id', getContato, async (req, res) => {
+router.delete("/:id", getContato, async (req, res) => {
   try {
     await res.contato.deleteOne();
-    res.json({ message: 'Contato excluído com sucesso!' });
+    res.json({ message: "Contato excluído com sucesso!" });
   } catch (err) {
     res.status(500).json({ message: err.message });
   }
@@ -75,7 +70,7 @@ async function getContato(req, res, next) {
   try {
     const contato = await Contato.findById(req.params.id);
     if (contato == null) {
-      return res.status(404).json({ message: 'Contato não encontrado' });
+      return res.status(404).json({ message: "Contato não encontrado" });
     }
     res.contato = contato;
     next();
